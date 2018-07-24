@@ -52,6 +52,10 @@ a {
   transition: all 0.5s ease-in-out 0s;
 }
 
+a.resume {
+    color: #ffffff;
+}
+
 
 a:hover {
   -moz-transition: all 0.5s ease-in-out 0s;
@@ -482,10 +486,12 @@ nav ul li a {
 }
 
 
+
 .ph {
-    max-width: 400px !important;
-    margin-left: 20px;
-    margin-right: 20px;
+    max-width: 90%;
+    max-height: 200px;
+    margin-left: 5%;
+    margin-right: 5%;
     margin-bottom: 50px;
 }
 
@@ -496,68 +502,11 @@ nav ul li a {
     margin-left: auto;
     margin-right: auto;
     object-fit: contain;
-    /* height: 200px; */
     background-color: #ff2a13;
     padding: 25px;
 }
 
 
-/*-----------------------------------------------------------------------------------*/
-/*  Contact
-/*-----------------------------------------------------------------------------------*/
-
-#contact {
-  height: auto;
-  width: 100%;
-  background: #b3d9ff;
-}
-
-.contact-details {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.contact-details li {
-  padding-bottom: 10px;
-}
-
-#contact input, #contact textarea {
-  width: 100%;
-}
-
-
-#contact  #sendmessage {
-  color: #18d26e;
-  border: 1px solid #18d26e;
-  display: none;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px;
-}
-
-#contact  #errormessage {
-  color: red;
-  display: none;
-  border: 1px solid red;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-  margin: 15px;
-}
-
-#contact #sendmessage.show, #contact #errormessage.show, #contact .show {
-  display: block;
-}
-
-#contact .validation {
-  color: red;
-  display: none;
-  margin: 0 0 20px;
-  font-weight: 400;
-  font-size: 13px;
-}
 
 /*-----------------------------------------------------------------------------------*/
 /*  Footer
