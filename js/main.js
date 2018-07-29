@@ -107,11 +107,13 @@ $(document).ready(function() {
   //  Porfolio isotope and filter
   // ========================================================================= //
 
-
-  var portfolioIsotope = $('.portfolio-container').isotope({
-    itemSelector: '.portfolio-thumbnail',
-    layoutMode: 'fitRows'
+  $('#portfolio').imagesLoaded( function() {
+      var portfolioIsotope = $('.portfolio-container').isotope({
+        itemSelector: '.portfolio-thumbnail',
+        layoutMode: 'fitRows'
+      });
   });
+
 
   $('#portfolio-flters li').on( 'click', function() {
     $("#portfolio-flters li").removeClass('filter-active');
@@ -173,6 +175,4 @@ $(document).ready(function() {
           $("#phonics-landscape").show();
       }
   }
-
-
 });
