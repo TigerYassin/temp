@@ -112,52 +112,54 @@ $(document).ready(function() {
         itemSelector: '.portfolio-thumbnail',
         layoutMode: 'fitRows'
       });
+
+      $('#portfolio-flters li').on( 'click', function() {
+        $("#portfolio-flters li").removeClass('filter-active');
+        $(this).addClass('filter-active');
+        addDescription($(this).data('filter'));
+        portfolioIsotope.isotope({ filter: $(this).data('filter') });
+      });
   });
 
 
-  $('#portfolio-flters li').on( 'click', function() {
-    $("#portfolio-flters li").removeClass('filter-active');
-    $(this).addClass('filter-active');
-    addDescription($(this).data('filter'));
-    portfolioIsotope.isotope({ filter: $(this).data('filter') });
-  });
-
-  //show all on launch
-  // portfolioIsotope.isotope({ filter: '.all' });
-  // addDescription('.all');
 
 
   function addDescription(type) {
       var text = document.getElementById('portfolio-description');
+
       if (type === '.all') {
-          text.textContent = 'Click on a tab to see more details';
+          $("#see-more-details").show();
+          text.textContent = '';
           addAppLink('#', '');
           hide(false);
-      } else if (type === '.branding') {
-          //Foodie
-          text.textContent = 'Foodie is the app I developed for my startup MealMe. Foodie is the ultimate app for food, bringing together reservations, deliveries, and reviews into one social network. Although all of the functionality works, the app is still undergoing massive design improvements and testing, and is not yet on the App Store.';
-          addAppLink('https://www.mealmeapp.com', 'View Landing Page');
-          hide();
-      } else if (type === '.mockups') {
-          //mideo
-          text.textContent = 'Normally, iOS pauses your music whenever you take a video. Mideo gets around this restriction and lets you continue to listen to music while you record.';
-          addAppLink('https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8');
-          hide();
-      } else if (type === '.uikits') {
-          //barbell
-          text.textContent = 'Barbell Loader and Calculator is the ultimate app for weightlifters and powerlifters. It loads the bar while calculating conversions, rep maxes, sinclair and wilks coefficients, loadable percentages, and more, along with ample customization.';
-          addAppLink('https://itunes.apple.com/US/app/id1322247393?mt=8')
-          hide();
-      }  else if (type === '.webdesign') {
-          //phonics
-          text.textContent = 'Brainy Phonics is an interactive children\'s game that improves childhood literacy rates in an engaging way. I was commissioned to upgrade Brainy Phonics for Walter Evans at Augusta University. ';
-          hide(false);
-          addAppLink('https://itunes.apple.com/in/app/brainy-phonics/id1121110521?mt=8');
-      }  else if (type === '.photography') {
-          //CodeMettle
-          text.textContent = 'I work as an Associate Software Engineer CO-OP at CodeMettle, writing code for translators and solvers that connect devices throughout a Network Management System so that users can view the status of, and run polls on, all of their devices at any time in one place. Working at CodeMettle has refined my skills in Python and has given me great experience networking using Linux.';
-          hide();
-          addAppLink('http://www.codemettle.com', 'View Website');
+      } else {
+          $("#see-more-details").hide();
+          if (type === '.branding') {
+              //Foodie
+              text.textContent = 'Foodie is the app I developed for my startup MealMe. Foodie is the ultimate app for food, bringing together reservations, deliveries, and reviews into one social network. Although all of the functionality works, the app is still undergoing massive design improvements and testing, and is not yet on the App Store.';
+              addAppLink('https://www.mealmeapp.com', 'View Landing Page');
+              hide();
+          } else if (type === '.mockups') {
+              //mideo
+              text.textContent = 'Normally, iOS pauses your music whenever you take a video. Mideo gets around this restriction and lets you continue to listen to music while you record.';
+              addAppLink('https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8');
+              hide();
+          } else if (type === '.uikits') {
+              //barbell
+              text.textContent = 'Barbell Loader and Calculator is the ultimate app for weightlifters and powerlifters. It loads the bar while calculating conversions, rep maxes, sinclair and wilks coefficients, loadable percentages, and more, along with ample customization.';
+              addAppLink('https://itunes.apple.com/US/app/id1322247393?mt=8')
+              hide();
+          }  else if (type === '.webdesign') {
+              //phonics
+              text.textContent = 'Brainy Phonics is an interactive children\'s game that improves childhood literacy rates in an engaging way. I was commissioned to upgrade Brainy Phonics for Dr Walter Evans, Professor Emeritus of English at Augusta University. ';
+              hide(false);
+              addAppLink('https://itunes.apple.com/in/app/brainy-phonics/id1121110521?mt=8');
+          }  else if (type === '.photography') {
+              //CodeMettle
+              text.textContent = 'I work as an Associate Software Engineer CO-OP at CodeMettle, writing code for translators and solvers that connect devices throughout a Network Management System so that users can view the status of, and run polls on, all of their devices at any time in one place. Working at CodeMettle has refined my skills in Python and has given me great experience networking using Linux.';
+              hide();
+              addAppLink('http://www.codemettle.com', 'View Website');
+          }
       }
   }
 
