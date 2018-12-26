@@ -1,13 +1,17 @@
 /*global $, jQuery, alert*/
 
+
+
 $(document).ready(function() {
 
   'use strict';
 
+  // in order to start with beginning background color for header
+  scrollingColors();
+
   // ========================================================================= //
   //  //SMOOTH SCROLL
   // ========================================================================= //
-
 
   $(document).on("scroll", onScroll);
 
@@ -62,6 +66,12 @@ $(document).ready(function() {
       $("#main-nav-subpage").hide();
       $("#main-nav-subpage").addClass('subpage-nav');
     }
+
+    // ========================================================================= //
+    //  SCROLLING COLORS
+    // ========================================================================= //
+    scrollingColors();
+
   });
 
   // ========================================================================= //
@@ -80,9 +90,9 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Will Said.", "Weightlifter.", "Developer."],
-      typeSpeed: 50,
-      loop: true,
+      strings: ["Will Said.", "Engineer.", "Entrepreneur.", "Quantitative Analyst.", "Weightlifter."],
+      typeSpeed: 40,
+      loop: true
     });
   });
 
@@ -128,46 +138,52 @@ $(document).ready(function() {
       var text = document.getElementById('portfolio-description');
 
       if (type === '.all') {
-          $("#see-more-details").show();
+          // $("#see-more-details").show();
           text.textContent = '';
           addAppLink('#', '');
           hide(false);
       } else {
           $("#see-more-details").hide();
-          if (type === '.branding') {
-              //Foodie
-              text.textContent = 'Foodie is the app I developed for my startup MealMe. Foodie is the ultimate app for food, bringing together reservations, deliveries, and reviews into one social network. Although all of the functionality works, the app is still undergoing massive design improvements and testing, and is not yet on the App Store.';
+          if (type === '.mealme') {
+              //mealme
+              text.textContent = 'Leading a team of engineers at MealMe, the social app for food that integrates restaurant discovery, delivery, and booking. Although all of the functionality works, the app is still undergoing massive design improvements and testing, and is not yet on the App Store.';
               addAppLink('https://www.mealmeapp.com', 'View Landing Page');
               hide();
-          } else if (type === '.mockups') {
+          } else if (type === '.mideo') {
               //mideo
               text.textContent = 'Normally, iOS pauses your music whenever you take a video. Mideo gets around this restriction and lets you continue to listen to music while you record.';
               addAppLink('https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8');
               hide();
-          } else if (type === '.uikits') {
+          } else if (type === '.barbell') {
               //barbell
               text.textContent = 'Barbell Loader and Calculator is the ultimate app for weightlifters and powerlifters. It loads the bar while calculating conversions, rep maxes, sinclair and wilks coefficients, loadable percentages, and more, along with ample customization.';
               addAppLink('https://itunes.apple.com/US/app/id1322247393?mt=8')
               hide();
-          }  else if (type === '.webdesign') {
+          }  else if (type === '.phonics') {
               //phonics
               text.textContent = 'Brainy Phonics is an interactive children\'s game that improves childhood literacy rates in an engaging way. I was commissioned to upgrade Brainy Phonics for Dr Walter Evans, Professor Emeritus of English at Augusta University. ';
               hide(false);
               addAppLink('https://itunes.apple.com/in/app/brainy-phonics/id1121110521?mt=8');
-          }  else if (type === '.photography') {
-              //CodeMettle
-              text.textContent = 'I work as an Associate Software Engineer CO-OP at CodeMettle, writing code for translators and solvers that connect devices throughout a Network Management System so that users can view the status of, and run polls on, all of their devices at any time in one place. Working at CodeMettle has refined my skills in Python and has given me great experience networking using Linux.';
+          }  else if (type === '.spotify') {
+              // Spotify alarm
+              text.textContent = 'Currently, the only music supported for alarms on iOS come from Apple Music. Spotify Music Alarm is fixing that. Spotify Music Alarm is exactly what you would expect, the first alarm dedicated to waking you up with Spotify.';
               hide();
-              addAppLink('http://www.codemettle.com', 'View Website');
+              removeAppLinks()
           }
       }
   }
 
   function addAppLink(link, linkText='View On The App Store') {
       var text = document.getElementById('portfolio-app-store');
-      text.href = link;
-      text.target = '_blank';
-      text.innerHTML = '<p>' + linkText + '</p>';
+      // text.href = link;
+      // text.target = '_blank';
+      // text.innerHTML = '<p>' + linkText + '</p>';
+
+      text.innerHTML = '<p><a href=\"' + link + '\" target=\"_blank\" class=\"whitelink\">' + linkText + '</a>'
+  }
+
+  function removeAppLinks() {
+      document.getElementById('portfolio-app-store').innerHTML = ''; // no app link
   }
 
   function hide(phonics = true) {
@@ -176,5 +192,33 @@ $(document).ready(function() {
       } else {
           $("#phonics-landscape").show();
       }
+  }
+
+  function scrollingColors() {
+      // selectors
+      var $window = $(window),
+          $body = $('body'),
+          $panel = $('.slide');
+
+      // Change 33% earlier than scroll position so colour is there when you arrive.
+      var scroll = $window.scrollTop() + ($window.height() / 3);
+
+      $panel.each(function () {
+        var $this = $(this);
+
+        // if position is within range of this panel.
+        // So position of (position of top of div <= scroll position) && (position of bottom of div > scroll position).
+        // Remember we set the scroll to 33% earlier in scroll var.
+        if ($this.position().top <= scroll && $this.position().top + $this.height() > scroll) {
+
+          // Remove all classes on body with color-
+          $body.removeClass(function (index, css) {
+            return (css.match (/(^|\s)color-\S+/g) || []).join(' ');
+          });
+
+          // Add class of currently active div
+          $body.addClass('color-' + $(this).data('color'));
+        }
+      });
   }
 });

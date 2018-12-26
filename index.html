@@ -20,7 +20,7 @@
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
-  <link href="lib/hover/.min.css" rel="stylesheet">
+  <link href="lib/hover/hover.min.css" rel="stylesheet">
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -58,25 +58,24 @@
 
 
   <!-- start section header -->
-  <div id="header" class="home">
+  <div id="header" class="home slide" data-color="one">
     <div class="container">
       <div class="header-content">
-        <h1><span class="typed"></span></h1>
-        <p>Welcome to my website hosted on a raspberry pi</p>
-        <p><a href="resume.pdf" target="_blank" class="resume">Resume</a>
+        <h1><span class="typed">WILL SAID.</span></h1>
+        <p><a href="resume.pdf" target="_blank" class="whitelink" id="resume">RÉSUMÉ</a>
         <ul class="list-unstyled list-social">
           <li><a href="mailto:iam@willsaid.com" target="_blank" class="ion-icon-social"><ion-icon name="mail"></ion-icon></a></li>
           <li><a href="https://www.linkedin.com/in/willsaid" target="_blank" class="ion-icon-social"><ion-icon name="logo-linkedin"></ion-icon></a></li>
           <li><a href="https://github.com/willsaid" target="_blank" class="ion-icon-social"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="tel:14044442057" target="_blank" class="ion-icon-social"><ion-icon name="phone-portrait"></ion-icon></a></li>
         </ul>
       </div>
     </div>
   </div>
   <!-- End section header -->
 
-
   <!-- start section about us -->
-  <div id="about" class="paddsection">
+  <div id="about" class="text-center paddsection slide" data-color="two">
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-lg-4 ">
@@ -88,10 +87,17 @@
         </div>
         <div class="col-lg-7">
           <div class="about-descr">
-            <p class="p-heading">Seeking challenges to improve the world with technology.</p>
+            <h1 class="p-heading">Continous innovation to solve the world's challenges.</h1>
             <p class="separator">
-                I am a second-year computer science student at Georgia Tech in Atlanta, Georgia.
-                Outside of studying, I work as a software engineer, develop apps for fun, run a startup, and train to one day represent Afghanistan in the Olympics.
+                I am currently studying Computer Science at Georgia Tech in Atlanta.
+                Outside of earning straight A's,
+                    I make a living running two tech startups,
+                    directing dozens of engineers at a nonprofit,
+                    working as a software engineer and rocket engineer,
+                    developing profitable iOS apps while President of the iOS Club,
+                    trading financial securities as a quant,
+                    practicing philosophy,
+                    and most importantly, training to represent Afghanistan in the Olympics.
             </p>
           </div>
         </div>
@@ -102,7 +108,7 @@
 
 
   <!-- start section services -->
-  <div id="services">
+  <div id="services" class="text-center paddsection slide" data-color="three">
     <div class="container">
       <div class="section-title text-center">
         <h2>SKILLS AND INTERESTS</h2>
@@ -158,11 +164,12 @@
   <!-- end section services -->
 
 
+
   <!-- start section portfolio -->
-  <div id="portfolio" class="text-center paddsection">
+  <div id="portfolio" class="text-center paddsection slide" data-color="four">
     <div class="container">
       <div class="section-title text-center">
-        <h2>Projects and Experience</h2>
+        <h2>Apps</h2>
       </div>
     </div>
     <div class="container">
@@ -171,47 +178,56 @@
           <div class="portfolio-list">
             <ul class="nav list-unstyled" id="portfolio-flters">
               <li class="filter filter-active" data-filter=".all">all</li>
-              <li class="filter" data-filter=".branding">Foodie</li>
-              <li class="filter" data-filter=".mockups">Mideo</li>
-              <li class="filter" data-filter=".uikits">Barbell Calculator</li>
-              <li class="filter" data-filter=".webdesign">Brainy Phonics</li>
-              <li class="filter" data-filter=".photography">CodeMettle</li>
+              <li class="filter" data-filter=".mealme">MealMe</li>
+              <li class="filter" data-filter=".mideo">Mideo</li>
+              <li class="filter" data-filter=".barbell">Barbell Calculator</li>
+              <li class="filter" data-filter=".phonics">Brainy Phonics</li>
+              <li class="filter" data-filter=".spotify">Spotify Alarm</li>
             </ul>
           </div>
-          <h5 id="see-more-details" style="padding-bottom: 50px;">
+          <!-- <h5 id="see-more-details" style="padding-bottom: 50px;">
               Click on a tab to view more details
-          </h5>
+          </h5> -->
           <div class="portfolio-container">
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding">
-                <img src="images/portfolio/foodie/1.png" alt="img">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mealme">
+                <img src="images/portfolio/mealme/1.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding">
-                <img src="images/portfolio/foodie/2.png"  alt="img">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mealme">
+                <img src="images/portfolio/mealme/2.png"  alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all branding">
-                <img src="images/portfolio/foodie/3.png" alt="img">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mealme">
+                <img src="images/portfolio/mealme/3.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mideo">
                 <img src="images/portfolio/mideo/3.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mideo">
                 <img src="images/portfolio/mideo/1.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mockups">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all mideo">
                 <img src="images/portfolio/mideo/2.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all uikits">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all barbell">
                 <img src="images/portfolio/barbell/1.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all uikits">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all barbell">
                 <img src="images/portfolio/barbell/2.png" alt="img">
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-thumbnail all uikits">
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all barbell">
                 <img src="images/portfolio/barbell/3.png" alt="img">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spotify">
+                <img src="images/portfolio/spotify/1.png" alt="img">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spotify">
+                <img src="images/portfolio/spotify/2.png" alt="img">
+            </div>
+            <div class="col-lg-4 col-md-6 portfolio-thumbnail all spotify">
+                <img src="images/portfolio/spotify/3.png" alt="img">
             </div>
           </div>
           <div id="phonics-landscape">
-              <div class="webdesign">
+              <div class="phonics">
                   <img class="ph" src="images/portfolio/phonics/1.png" alt="img">
                   <img class="ph" src="images/portfolio/phonics/2.png" alt="img">
               </div>
@@ -233,7 +249,7 @@
 
 
     <!-- start section tutorials -->
-    <div id="tutorials" class="text-left paddsection">
+    <div id="tutorials" class="text-center paddsection slide" data-color="five">
       <div class="container">
         <div class="section-title text-center">
           <h2>tutorials</h2>
@@ -243,16 +259,34 @@
         <div class="journal-block">
           <div class="row">
               <div class="col-lg-4 col-md-6">
-              </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="journal-info">
-                <a href="rpi.html"><img src="images/rpi.png" class="img-responsive" alt="img"></a>
-                <div class="journal-txt">
-                  <h4><a href="rpi.html">Website on a Pi</a></h4>
-                  <p style="text-align: left;">How to host a website on a Raspberry Pi</p>
-                </div>
-              </div>
-            </div>
+                  <div class="journal-info">
+                    <a href="rpi.html"><img src="images/rpi.png" class="img-responsive" alt="img"></a>
+                    <div class="journal-txt">
+                      <h5><a href="rpi.html" class="whitelink">Website on a Pi</a></h5>
+                      <p>How to host a website on a Raspberry Pi</p>
+                    </div>
+                   </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                   <div class="journal-info">
+                     <a href="#tutorials"><img src="images/iphone.png" class="img-responsive" alt="img"></a>
+                     <div class="journal-txt">
+                       <h5><a href="#tutorials" class="whitelink">Getting Started with iOS</a></h5>
+                       <p>Coming soon</p>
+                     </div>
+                    </div>
+               </div>
+
+               <div class="col-lg-4 col-md-6">
+                   <div class="journal-info">
+                     <a href="#tutorials"><img src="images/fb.png" class="img-responsive" alt="img"></a>
+                     <div class="journal-txt">
+                       <h5><a href="#tutorials" class="whitelink">Machine Learning for Trading</a></h5>
+                       <p>Coming soon</p>
+                     </div>
+                    </div>
+               </div>
           </div>
         </div>
       </div>
@@ -261,18 +295,20 @@
 
 
 
-
-
   <!-- start section footer -->
-  <div id="footer" class="text-center">
-    <div class="container">
+  <div id="footer" class="text-center slide" data-color="black">
+    <div class="container header-content">
+      <h1><span class="typed">WILL SAID.</span></h1>
       <div class="socials-media text-center">
         <ul class="list-unstyled">
             <li><a href="mailto:iam@willsaid.com" target="_blank" class="ion-icon-social"><ion-icon name="mail"></ion-icon></a></li>
             <li><a href="https://www.linkedin.com/in/willsaid" target="_blank" class="ion-icon-social"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li><a href="https://github.com/willsaid" target="_blank" class="ion-icon-social"><ion-icon name="logo-github"></ion-icon></a></li>
+            <li><a href="tel:14044442057" target="_blank" class="ion-icon-social"><ion-icon name="phone-portrait"></ion-icon></a></li>
         </ul>
       </div>
+      <p>hosted at home on a raspberry pi</p>
+      <p><a href="https://github.com/willsaid/willsaid.com" class="whitelink" target="_blank">contribute to my source code</a>
     </div>
   </div>
   <!-- End section footer -->
@@ -287,6 +323,8 @@
   <script src="lib/isotope/isotope.pkgd.min.js"></script>
   <script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
   <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.js"></script>
+  <script src="lib/jquery/jquery.scrollie.min.js"></script>
+
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>

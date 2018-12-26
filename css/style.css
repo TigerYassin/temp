@@ -2,6 +2,7 @@
 /*  General Styling
 /*-----------------------------------------------------------------------------------*/
 
+
 body {
   background: #ffffff;
   color: #898989;
@@ -18,10 +19,14 @@ body {
   -o-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+
+  /* added */
+  transition: background-color 1s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
+  color: white;
 }
 
 h2 {
@@ -29,14 +34,14 @@ h2 {
   font-weight: 600;
 }
 
-h4 {
+h4, h5 {
   color: #292929;
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
 }
 
 a {
-  color: #292929;
+  color: #292929; black
   text-decoration: none !important;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -45,10 +50,9 @@ a {
   transition: all 0.5s ease-in-out 0s;
 }
 
-a.resume {
+a.whitelink {
     color: #ffffff;
 }
-
 
 a:hover {
   -moz-transition: all 0.5s ease-in-out 0s;
@@ -59,7 +63,7 @@ a:hover {
 }
 
 a:hover, a:focus {
-  color: #b8a07e;
+  color: #bca569;
   text-decoration: underline;
 }
 
@@ -84,18 +88,19 @@ p {
   margin: 25px 0;
   padding: 0;
   font-size: 15px;
-  color: #999999;
+  color: black;
+  /* color: #999999; old gray color */
   line-height: 28px;
 }
 
 ::-moz-selection {
-  background: #b8a07e;
-  color: #fff;
+  background: #fff;
+  color: #bca569
 }
 
 ::selection {
-  background: #b8a07e;
-  color: #fff;
+  background: #fff;
+  color: #bca569;
 }
 
 .btn {
@@ -111,7 +116,7 @@ p {
 }
 
 .btn:hover, .btn:focus {
-  color: #fff;
+  color: #bca569;
 }
 
 .padDiv {
@@ -163,7 +168,7 @@ p {
 }
 
 .hvr-shutter-in-horizontal:hover {
-  background: #b8a07e;
+  background: #bca569;
 }
 
 .mb-30 {
@@ -238,9 +243,11 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #header {
-  background: #b3d9ff repeat scroll center center / cover;
+  /* the only slide that starts with a background color */
+  /* background: #3498db; */
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 
@@ -259,11 +266,11 @@ nav ul li a {
   font-weight: 700;
   margin-bottom: 10px;
   text-transform: uppercase;
-  color: #fff;
+  color: white;
 }
 
 .header-content p {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 5px;
   margin-top: 0;
   margin-bottom: 30px;
@@ -279,11 +286,12 @@ nav ul li a {
 
 .header-content .list-social li i {
   color: #fff;
-  font-size: 15px;
+  font-size: 30px;
 }
 
 .typed {
     font-family: "Courier New", Courier, monospace;
+    padding-bottom: 20px;
 }
 
 
@@ -296,14 +304,27 @@ nav ul li a {
 
 #about {
   width: 100%;
-  height: auto;
-  background: #fff5e6;
+  /* height: 100vh; /* just added */ */
+  /* height: auto; */
+  /* background: #fff5e6; */
   padding-top: 190px;
+
+  position: relative;
+
+  /* display: inline-block;
+  margin-bottom: 100px;
+  bottom: 100px;
+  /* bottom: 100px;
+  float: left;
+  margin-bottom: auto; */
+
+  /* outline: 5px dotted red; */
+  /* margin-bottom: 0; */
 }
 
 #about .div-img-bg {
   padding-bottom: 30px;
-  border: 20px solid #b8a07e;
+  border: 20px solid #fff;
 }
 
 #about .div-img-bg .about-img img {
@@ -332,15 +353,23 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #services {
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
   position: relative;
   padding-bottom: 80px;
   padding-top: 80px;
+  /* clear: both; */
+  /* display: inline-block; */
+  /* top: 100px; */
+  /* float: left; */
+  /* margin-top: 100px; */
+  top: 150px;
+  bottom: 150px;
 }
 
 .owl-item {
   float: left;
 }
+
 .services-block span {
   margin: 10px 0;
   position: relative;
@@ -360,13 +389,13 @@ nav ul li a {
 
 .services-block i {
   font-size: 44px;
-  color: #b8a07e;
+  color: #fff;
   line-height: 44px;
 }
 
 .ion-icon {
     font-size: 30px;
-    color: #b8a07e;
+    color: #fff;
 }
 
 .ion-icon-social {
@@ -396,12 +425,12 @@ nav ul li a {
   border-radius: 50%;
   border: 0;
   padding: 0 !important;
-  background-color: #ddd;
+  background-color: #fff;
   cursor: pointer;
 }
 
 .services-carousel .owl-dot.active {
-  background-color: #b8a07e;
+  background-color: #fff;
 }
 
 .owl-nav {
@@ -416,7 +445,8 @@ nav ul li a {
 #portfolio {
   position: relative;
   padding-bottom: 50px;
-  background-color: #ffffe6;
+  /* background-color: #ffffe6; */
+  margin-top: 200px;
 }
 
 #portfolio .portfolio-list {
@@ -432,7 +462,7 @@ nav ul li a {
   margin: 0 40px 0 0;
   float: left;
   font-size: 14px;
-  color: #999999;
+  color: #000;
   line-height: 16px;
   cursor: pointer;
   font-family: 'Poppins', helvetica;
@@ -447,7 +477,7 @@ nav ul li a {
 }
 
 #portfolio .portfolio-list .nav li:hover, #portfolio .portfolio-list .nav li.filter-active  {
-  color: #b8a07e;
+  color: #fff;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -484,7 +514,7 @@ nav ul li a {
 }
 
 
-#codemettle-logo {
+/* #codemettle-logo {
     max-width: 400px;
     display: block;
     margin-left: auto;
@@ -492,7 +522,7 @@ nav ul li a {
     object-fit: contain;
     background-color: #ff2a13;
     padding: 25px;
-}
+} */
 
 
 
@@ -503,21 +533,33 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #tutorials,  #journal-blog {
-  height: auto;
+  /* height: auto; */
+  height: 100%;
   width: 100%;
-  background: #f7f7f7;
+
+  /* background: #f7f7f7; */
   padding-bottom: 60px;
   position: relative;
+
+  margin: 0 auto;
+
+  /* text-align: center;
+  /* margin: 0 0 0 0; */
+  /* display: inline-block; */
 }
 
 #journal-blog {
-  background: #fff;
+  /* background: #fff; */
   padding-bottom: 30px;
 }
 
+/* .journal-block {
+    max-height: 50% !important;
+} */
+
 #tutorials .journal-block {
   display: inline-block;
-  height: auto;
+  /* height: auto; */
   width: 100%;
 }
 
@@ -525,8 +567,18 @@ nav ul li a {
   position: relative;
 }
 
+/* img.journal-block {
+    max-height: 50px !important;
+} */
+
 .journal-block .journal-info img {
-  max-width: 100%;
+  /* max-width: 100%; */
+  max-height: 250px;
+
+}
+.journal-info {
+    margin: 0 auto;
+
 }
 
 .journal-block .journal-info .journal-txt {
@@ -549,7 +601,7 @@ nav ul li a {
 }
 
 .journal-block .journal-info .journal-txt h4 a:hover {
-  color: #b8a07e;
+  color: #fff;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -570,9 +622,11 @@ nav ul li a {
 /*-----------------------------------------------------------------------------------*/
 
 #footer {
-  background: #b3d9ff;
+  /* background: #3498db; */
+  /* background: white; */
   padding-top: 50px;
   padding-bottom: 50px;
+  height: 75vh;
 }
 
 #footer .socials-media {
@@ -592,8 +646,9 @@ nav ul li a {
 }
 
 #footer .socials-media ul li a {
-  font-size: 24px;
-  color: #999;
+  font-size: 30px;
+  /* color: #999; */
+  color: #fff;
   letter-spacing: 0.1em;
   font-weight: 500;
   background: transparent;
@@ -606,7 +661,7 @@ nav ul li a {
 }
 
 #footer .socials-media ul li a:hover {
-  color: #b8a07e;
+  color: #bca569;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -624,4 +679,24 @@ nav ul li a {
 
 .credits {
   font-size: 13px;
+}
+
+/* for the slides  */
+.color-five {
+    background-color: #19b5fe;
+}
+.color-four {
+    background-color: #22a7f0;
+}
+.color-three {
+    background-color: #59abe3;
+}
+.color-two {
+    background-color: #6bb9f0;
+}
+.color-one {
+    background-color: #89c4f4;
+}
+.color-black {
+    background-color: black;
 }
