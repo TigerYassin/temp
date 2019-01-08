@@ -168,7 +168,7 @@ $(document).ready(function() {
               // Spotify alarm
               text.textContent = 'Currently, the only music supported for alarms on iOS come from Apple Music. Spotify Music Alarm is fixing that. Spotify Music Alarm is exactly what you would expect, the first alarm dedicated to waking you up with Spotify.';
               hide();
-              removeAppLinks()
+              addAppLink('https://itunes.apple.com/us/app/spotify-alarm-clock/id1439527300')
           }
       }
   }
