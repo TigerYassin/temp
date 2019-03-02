@@ -152,8 +152,14 @@ $(document).ready(function() {
           } else if (type === '.mideo') {
               //mideo
               text.textContent = 'Normally, iOS pauses your music whenever you take a video. Mideo gets around this restriction and lets you continue to listen to music while you record.';
-              addAppLink('https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8', linkText='View on App Store for iOS');
-              addAppLink('https://play.google.com/store/apps/details?id=io.synople.mideo', linkText='View on Google Play for Android')
+              var androidLink = 'https://play.google.com/store/apps/details?id=io.synople.mideo'
+              var androidText = 'View on Google Play for Android'
+              var iosLink = 'https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8'
+              var iosText = 'View on App Store for iOS'
+              var text = document.getElementById('portfolio-app-store');
+              var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>'
+              var android = '<p><a href=\"' + androidLink + '\" target=\"_blank\" class=\"whitelink\">' + androidText + '</a>'
+              text.innerHTML = ios + android
               hide();
           } else if (type === '.barbell') {
               //barbell
