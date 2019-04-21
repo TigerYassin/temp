@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Will Said.", "Engineer.", "Entrepreneur.", "Weightlifter."],
+      strings: ["Will Said.", "Weightlifter.", "Engineer.", "Entrepreneur."],
       typeSpeed: 40,
       loop: true
     });
@@ -146,8 +146,17 @@ $(document).ready(function() {
           $("#see-more-details").hide();
           if (type === '.mealme') {
               //mealme
-              text.textContent = 'Leading a team of engineers at MealMe, the social app for food that integrates restaurant discovery, delivery, and booking. Although all of the functionality works, the app is still undergoing massive design improvements and testing, and is not yet on the App Store.';
-              addAppLink('https://www.mealmeapp.com', 'View Landing Page');
+              text.textContent = 'MealMe is the social network for food that integrates restaurant discovery, delivery, and reservations.';
+
+              var websiteLink = 'https://www.mealmeapp.com'
+              var websiteText = 'View Website'
+              var iosLink = 'https://itunes.apple.com/us/app/id1460140965?mt=8'
+              var iosText = 'View on App Store for iOS'
+              var text = document.getElementById('portfolio-app-store');
+              var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>'
+              var web = '<p><a href=\"' + websiteLink + '\" target=\"_blank\" class=\"whitelink\">' + websiteText + '</a>'
+              text.innerHTML = ios + web
+
               hide();
           } else if (type === '.mideo') {
               //mideo
