@@ -165,10 +165,13 @@ $(document).ready(function() {
               var androidText = 'View on Google Play for Android'
               var iosLink = 'https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8'
               var iosText = 'View on App Store for iOS'
+              var supportLink = 'http://willsaid.com/mideo'
+              var supportText = 'Support Page'
               var text = document.getElementById('portfolio-app-store');
-              var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>'
-              var android = '<p><a href=\"' + androidLink + '\" target=\"_blank\" class=\"whitelink\">' + androidText + '</a>'
-              text.innerHTML = ios + android
+              var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>';
+              var android = '<p><a href=\"' + androidLink + '\" target=\"_blank\" class=\"whitelink\">' + androidText + '</a>';
+              var support = '<p><a href=\"' + supportLink + '\" target=\"_blank\" class=\"whitelink\">' + supportText + '</a>';
+              text.innerHTML = ios + android + support;
               hide();
           } else if (type === '.barbell') {
               //barbell
@@ -182,9 +185,19 @@ $(document).ready(function() {
               addAppLink('https://itunes.apple.com/in/app/brainy-phonics/id1121110521?mt=8');
           }  else if (type === '.spotify') {
               // Spotify alarm
-              text.textContent = 'Currently, the only music supported for alarms on iOS come from Apple Music. Spotify Music Alarm is fixing that. Spotify Music Alarm is exactly what you would expect, the first alarm dedicated to waking you up with Spotify.';
+              text.textContent = 'Spotify Music Alarm is exactly what you would expect, the first alarm dedicated to waking you up with Spotify.';
+
+              var iosLink = 'https://itunes.apple.com/us/app/spotify-alarm-clock/id1439527300'
+              var iosText = 'View on App Store for iOS'
+              var supportLink = 'http://willsaid.com/spotify'
+              var supportText = 'Support Page'
+              var text = document.getElementById('portfolio-app-store');
+              var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>';
+              var support = '<p><a href=\"' + supportLink + '\" target=\"_blank\" class=\"whitelink\">' + supportText + '</a>';
+              text.innerHTML = ios + support;
+
               hide();
-              addAppLink('https://itunes.apple.com/us/app/spotify-alarm-clock/id1439527300')
+              // addAppLink('https://itunes.apple.com/us/app/spotify-alarm-clock/id1439527300')
           }
       }
   }
