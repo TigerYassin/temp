@@ -90,7 +90,7 @@ $(document).ready(function() {
 
   $(function() {
     typed.typed({
-      strings: ["Will Said.", "Weightlifter.", "Engineer.", "Entrepreneur."],
+      strings: ["Will Said.", "Weightlifter.", "Startup Founder.", "Engineer.", "iOS Developer."],
       typeSpeed: 40,
       loop: true
     });
