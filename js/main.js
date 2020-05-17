@@ -161,17 +161,20 @@ $(document).ready(function() {
           } else if (type === '.mideo') {
               //mideo
               text.textContent = 'Normally, iOS pauses your music whenever you take a video. Mideo gets around this restriction and lets you continue to listen to music while you record.';
-              var androidLink = 'https://play.google.com/store/apps/details?id=io.synople.mideo'
-              var androidText = 'View on Google Play for Android'
-              var iosLink = 'https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8'
-              var iosText = 'View on App Store for iOS'
-              var supportLink = 'http://willsaid.com/mideo'
-              var supportText = 'Support Page'
+              var landingPageLink = 'https://mideo.app';
+              var landingPageText = 'Mideo - Listen to Music While Recording Video';
+              var androidLink = 'https://play.google.com/store/apps/details?id=io.synople.mideo';
+              var androidText = 'View on Google Play for Android';
+              var iosLink = 'https://itunes.apple.com/us/app/mideo-video-listen-to-music/id1358135284?mt=8';
+              var iosText = 'View on App Store for iOS';
+              var supportLink = 'http://willsaid.com/mideo';
+              var supportText = 'Support Page';
               var text = document.getElementById('portfolio-app-store');
               var ios = '<p><a href=\"' + iosLink + '\" target=\"_blank\" class=\"whitelink\">' + iosText + '</a>';
               var android = '<p><a href=\"' + androidLink + '\" target=\"_blank\" class=\"whitelink\">' + androidText + '</a>';
               var support = '<p><a href=\"' + supportLink + '\" target=\"_blank\" class=\"whitelink\">' + supportText + '</a>';
-              text.innerHTML = ios + android + support;
+              var landing = '<p><a href=\"' + landingPageLink + '\" target=\"_blank\" class=\"whitelink\">' + landingPageText + '</a>';
+              text.innerHTML = landing;
               hide();
           } else if (type === '.barbell') {
               //barbell
