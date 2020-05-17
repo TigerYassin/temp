@@ -2,6 +2,8 @@
 
 My personal website, hosted on a Raspberry Pi at home.
 
-Check it out at http://wilsaid.com 
+Check it out at http://wilsaid.com
 
 Feel free to contribute or use as a template.
+
+Mideo did a good job with the template: [Mideo - Take Videos with Music](https://mideo.app)
