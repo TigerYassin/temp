@@ -146,14 +146,8 @@ blockquote {
 }
 
 img {
-  /* width: 25%; */
+  width: 100%;
   object-fit: cover;
-  max-height: 50%;
-  max-width: 50%;
-  /* height: 200px; */
-  /* background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%; */
 }
 
 .ion-icon {
