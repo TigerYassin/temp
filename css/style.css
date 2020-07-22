@@ -573,9 +573,9 @@ nav ul li a {
 } */
 
 .journal-block .journal-info img {
-  /* max-width: 100%; */
-  max-height: 250px;
-
+  max-width: 75%;
+  height: 150px;
+  object-fit: contain;
 }
 .journal-info {
     margin: 0 auto;
