@@ -1,5 +1,11 @@
 {
-	"webcredentials": {
-		"apps": [ "6N44JXQK9U.com.mealmeapp.MealMeApp" ]
-	}
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "6N44JXQK9U.com.mealmeapp.MealMeApp",
+                "paths": [ "/referral/*"]
+            }
+        ]
+    }
 }
