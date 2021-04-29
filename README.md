@@ -2,7 +2,7 @@
 
 My personal website, hosted on a Raspberry Pi at home.
 
-Check it out at http://wilsaid.com
+Check it out at http://willsaid.com
 
 Feel free to contribute or use as a template.
 
